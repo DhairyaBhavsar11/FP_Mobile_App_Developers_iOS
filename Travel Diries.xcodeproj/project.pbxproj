@@ -16,6 +16,8 @@
 		B62DDD142831FAC50030B1E3 /* Travel_DiriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62DDD132831FAC50030B1E3 /* Travel_DiriesTests.swift */; };
 		B62DDD1E2831FAC50030B1E3 /* Travel_DiriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62DDD1D2831FAC50030B1E3 /* Travel_DiriesUITests.swift */; };
 		B62DDD202831FAC50030B1E3 /* Travel_DiriesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62DDD1F2831FAC50030B1E3 /* Travel_DiriesUITestsLaunchTests.swift */; };
+		B62DDD2F283202910030B1E3 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62DDD2E283202910030B1E3 /* HomePageViewController.swift */; };
+		B62DDD31283202B40030B1E3 /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62DDD30283202B40030B1E3 /* DetailPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		B62DDD192831FAC50030B1E3 /* Travel DiriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travel DiriesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62DDD1D2831FAC50030B1E3 /* Travel_DiriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_DiriesUITests.swift; sourceTree = "<group>"; };
 		B62DDD1F2831FAC50030B1E3 /* Travel_DiriesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_DiriesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B62DDD2E283202910030B1E3 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		B62DDD30283202B40030B1E3 /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				B62DDCFE2831FAC30030B1E3 /* SceneDelegate.swift */,
 				B62DDD002831FAC30030B1E3 /* ViewController.swift */,
 				B62DDD022831FAC30030B1E3 /* Main.storyboard */,
+				B62DDD2E283202910030B1E3 /* HomePageViewController.swift */,
+				B62DDD30283202B40030B1E3 /* DetailPageViewController.swift */,
 				B62DDD052831FAC50030B1E3 /* Assets.xcassets */,
 				B62DDD072831FAC50030B1E3 /* LaunchScreen.storyboard */,
 				B62DDD0A2831FAC50030B1E3 /* Info.plist */,
@@ -258,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62DDD31283202B40030B1E3 /* DetailPageViewController.swift in Sources */,
+				B62DDD2F283202910030B1E3 /* HomePageViewController.swift in Sources */,
 				B62DDD012831FAC30030B1E3 /* ViewController.swift in Sources */,
 				B62DDCFD2831FAC30030B1E3 /* AppDelegate.swift in Sources */,
 				B62DDCFF2831FAC30030B1E3 /* SceneDelegate.swift in Sources */,
