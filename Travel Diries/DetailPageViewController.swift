@@ -11,7 +11,7 @@ class DetailPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "first screen"
+        
         // Do any additional setup after loading the view.
     }
     

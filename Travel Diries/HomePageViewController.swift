@@ -11,7 +11,7 @@ class HomePageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Home Screen"
+        
         // Do any additional setup after loading the view.
     }
     
