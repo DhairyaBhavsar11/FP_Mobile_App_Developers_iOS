@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    @IBOutlet weak var collectionView: UICollectionView!
     var imageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
         imageView.image = UIImage(named: "Logo")

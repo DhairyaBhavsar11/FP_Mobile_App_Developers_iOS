@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -109,95 +110,56 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tajmahal" translatesAutoresizingMaskIntoConstraints="NO" id="aGZ-uv-Y3a">
-                                <rect key="frame" x="30" y="242" width="150" height="161"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cntower" translatesAutoresizingMaskIntoConstraints="NO" id="3Ys-Gd-qnX">
-                                <rect key="frame" x="232" y="242" width="152" height="161"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="161" id="mKH-83-Y3n"/>
-                                    <constraint firstAttribute="width" constant="152" id="ng8-F2-ngA"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taj Mahal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4XB-Cy-h3w">
-                                <rect key="frame" x="30" y="433" width="150" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="hUm-bx-4Qp"/>
-                                    <constraint firstAttribute="width" constant="150" id="xjQ-Wz-Nrx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CN Tower" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1I-3y-ql9">
-                                <rect key="frame" x="232" y="433" width="152" height="28"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bnaff" translatesAutoresizingMaskIntoConstraints="NO" id="cd1-pv-Ic5">
-                                <rect key="frame" x="30" y="511" width="162" height="190"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nigrafalls" translatesAutoresizingMaskIntoConstraints="NO" id="8Qp-AI-T41">
-                                <rect key="frame" x="232" y="511" width="152" height="190"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nigra Falls" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlI-ey-D6i">
-                                <rect key="frame" x="234" y="731" width="150" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="07h-qF-plb"/>
-                                    <constraint firstAttribute="width" constant="150" id="f1F-SH-iwj"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bnaff" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5x-ww-bJq">
-                                <rect key="frame" x="30" y="731" width="150" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="SDG-81-Djq"/>
-                                    <constraint firstAttribute="width" constant="150" id="tXp-pj-D7a"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hH1-PZ-EDV">
+                                <rect key="frame" x="20" y="208" width="374" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eyD-s1-eoa">
+                                    <size key="itemSize" width="180" height="180"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="VD3-Ox-jzd" customClass="CollectionViewCell" customModule="Travel_Diries" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QJO-N5-4nf">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vxI-Gz-wlP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="139"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgM-kX-FT8">
+                                                    <rect key="frame" x="8" y="147" width="164" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="180" height="180"/>
+                                        <connections>
+                                            <outlet property="siteImageView" destination="vxI-Gz-wlP" id="JGx-AS-TlX"/>
+                                            <outlet property="siteLable" destination="WgM-kX-FT8" id="RX6-Ka-4UF"/>
+                                            <segue destination="b7Z-Az-Ht6" kind="show" id="ZtZ-hm-CTj"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TAL-Hl-eJ1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="V5Y-Pz-h6p" firstAttribute="leading" secondItem="TAL-Hl-eJ1" secondAttribute="leading" constant="130" id="6xP-AE-PL6"/>
-                            <constraint firstItem="TAL-Hl-eJ1" firstAttribute="trailing" secondItem="8Qp-AI-T41" secondAttribute="trailing" constant="30" id="9um-q5-1ty"/>
                             <constraint firstItem="TAL-Hl-eJ1" firstAttribute="trailing" secondItem="V5Y-Pz-h6p" secondAttribute="trailing" constant="120" id="Ebu-0N-dYb"/>
-                            <constraint firstItem="3Ys-Gd-qnX" firstAttribute="bottom" secondItem="aGZ-uv-Y3a" secondAttribute="bottom" id="Eqm-ap-Pus"/>
-                            <constraint firstItem="8Qp-AI-T41" firstAttribute="leading" secondItem="3Ys-Gd-qnX" secondAttribute="leading" id="Eyj-Yr-Opx"/>
-                            <constraint firstItem="8Qp-AI-T41" firstAttribute="top" secondItem="cd1-pv-Ic5" secondAttribute="top" id="IdF-zY-zve"/>
-                            <constraint firstItem="aGZ-uv-Y3a" firstAttribute="leading" secondItem="TAL-Hl-eJ1" secondAttribute="leading" constant="30" id="K4R-UN-337"/>
                             <constraint firstItem="V5Y-Pz-h6p" firstAttribute="top" secondItem="TAL-Hl-eJ1" secondAttribute="top" constant="50" id="Ndl-5o-fMW"/>
-                            <constraint firstItem="8Qp-AI-T41" firstAttribute="bottom" secondItem="cd1-pv-Ic5" secondAttribute="bottom" id="P0j-yM-kJd"/>
-                            <constraint firstItem="cd1-pv-Ic5" firstAttribute="leading" secondItem="TAL-Hl-eJ1" secondAttribute="leading" constant="30" id="RBK-wb-f9u"/>
-                            <constraint firstItem="C1I-3y-ql9" firstAttribute="top" secondItem="3Ys-Gd-qnX" secondAttribute="bottom" constant="30" id="XQV-sT-xaH"/>
-                            <constraint firstItem="3Ys-Gd-qnX" firstAttribute="leading" secondItem="aGZ-uv-Y3a" secondAttribute="trailing" constant="52" id="a7N-Vr-pa2"/>
-                            <constraint firstItem="8Qp-AI-T41" firstAttribute="leading" secondItem="C1I-3y-ql9" secondAttribute="leading" id="d7Y-eF-jQS"/>
-                            <constraint firstItem="8Qp-AI-T41" firstAttribute="leading" secondItem="cd1-pv-Ic5" secondAttribute="trailing" constant="40" id="dEt-Rw-R3q"/>
-                            <constraint firstItem="8Qp-AI-T41" firstAttribute="top" secondItem="C1I-3y-ql9" secondAttribute="bottom" constant="50" id="dnl-XT-yJK"/>
-                            <constraint firstItem="TAL-Hl-eJ1" firstAttribute="trailing" secondItem="qlI-ey-D6i" secondAttribute="trailing" constant="30" id="e4X-Ld-kOB"/>
-                            <constraint firstItem="TAL-Hl-eJ1" firstAttribute="trailing" secondItem="3Ys-Gd-qnX" secondAttribute="trailing" constant="30" id="eWE-ta-IXq"/>
-                            <constraint firstItem="qlI-ey-D6i" firstAttribute="top" secondItem="8Qp-AI-T41" secondAttribute="bottom" constant="30" id="ej5-e2-uyP"/>
-                            <constraint firstItem="aGZ-uv-Y3a" firstAttribute="top" secondItem="V5Y-Pz-h6p" secondAttribute="bottom" constant="60" id="evf-4x-gfr"/>
-                            <constraint firstItem="3Ys-Gd-qnX" firstAttribute="top" secondItem="V5Y-Pz-h6p" secondAttribute="bottom" constant="60" id="fxd-jL-d4B"/>
-                            <constraint firstItem="J5x-ww-bJq" firstAttribute="leading" secondItem="TAL-Hl-eJ1" secondAttribute="leading" constant="30" id="imi-rk-Gtq"/>
-                            <constraint firstItem="4XB-Cy-h3w" firstAttribute="leading" secondItem="TAL-Hl-eJ1" secondAttribute="leading" constant="30" id="iuE-FE-7z2"/>
-                            <constraint firstItem="4XB-Cy-h3w" firstAttribute="top" secondItem="aGZ-uv-Y3a" secondAttribute="bottom" constant="30" id="lGn-12-UYN"/>
-                            <constraint firstItem="8Qp-AI-T41" firstAttribute="trailing" secondItem="C1I-3y-ql9" secondAttribute="trailing" id="mCQ-mv-Bb7"/>
-                            <constraint firstItem="TAL-Hl-eJ1" firstAttribute="trailing" secondItem="C1I-3y-ql9" secondAttribute="trailing" constant="30" id="nyC-qJ-9fV"/>
-                            <constraint firstItem="J5x-ww-bJq" firstAttribute="top" secondItem="cd1-pv-Ic5" secondAttribute="bottom" constant="30" id="tp0-PW-5o8"/>
-                            <constraint firstItem="cd1-pv-Ic5" firstAttribute="top" secondItem="4XB-Cy-h3w" secondAttribute="bottom" constant="50" id="zW2-Xw-UHL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a2i-If-Bhu"/>
-                    <connections>
-                        <segue destination="b7Z-Az-Ht6" kind="show" id="NPs-tt-d5D"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1N-Dl-Das" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,10 +202,6 @@
     </scenes>
     <resources>
         <image name="Logo" width="360" height="360"/>
-        <image name="bnaff" width="266" height="190"/>
-        <image name="cntower" width="225" height="225"/>
-        <image name="nigrafalls" width="275" height="183"/>
-        <image name="tajmahal" width="275" height="183"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
