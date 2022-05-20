@@ -101,9 +101,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hH1-PZ-EDV">
-                                <rect key="frame" x="0.0" y="124" width="414" height="772"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hH1-PZ-EDV">
+                                <rect key="frame" x="0.0" y="320" width="414" height="576"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eyD-s1-eoa">
                                     <size key="itemSize" width="180" height="180"/>
@@ -119,7 +118,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vxI-Gz-wlP">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bnaff" translatesAutoresizingMaskIntoConstraints="NO" id="vxI-Gz-wlP">
                                                     <rect key="frame" x="0.0" y="0.0" width="180" height="139"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -136,14 +135,31 @@
                                         <connections>
                                             <outlet property="siteImageView" destination="vxI-Gz-wlP" id="JGx-AS-TlX"/>
                                             <outlet property="siteLable" destination="WgM-kX-FT8" id="RX6-Ka-4UF"/>
-                                            <segue destination="b7Z-Az-Ht6" kind="show" id="ZtZ-hm-CTj"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13O-k9-XoT">
+                                <rect key="frame" x="174" y="165" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="b7Z-Az-Ht6" kind="show" id="q4R-zK-dfo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TAL-Hl-eJ1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hH1-PZ-EDV" firstAttribute="top" secondItem="13O-k9-XoT" secondAttribute="bottom" constant="124" id="Izr-NU-rs3"/>
+                            <constraint firstItem="13O-k9-XoT" firstAttribute="top" secondItem="TAL-Hl-eJ1" secondAttribute="top" constant="77" id="QVu-M4-vu8"/>
+                            <constraint firstItem="hH1-PZ-EDV" firstAttribute="top" secondItem="TAL-Hl-eJ1" secondAttribute="top" constant="232" id="RUS-2n-B6X"/>
+                            <constraint firstAttribute="bottom" secondItem="hH1-PZ-EDV" secondAttribute="bottom" id="ToA-hK-3bn"/>
+                            <constraint firstItem="hH1-PZ-EDV" firstAttribute="leading" secondItem="TAL-Hl-eJ1" secondAttribute="leading" id="XdY-Dk-fLL"/>
+                            <constraint firstItem="hH1-PZ-EDV" firstAttribute="trailing" secondItem="TAL-Hl-eJ1" secondAttribute="trailing" id="mUG-NA-q3s"/>
+                            <constraint firstItem="TAL-Hl-eJ1" firstAttribute="trailing" secondItem="13O-k9-XoT" secondAttribute="trailing" constant="173" id="s8V-wQ-vrk"/>
+                            <constraint firstItem="13O-k9-XoT" firstAttribute="leading" secondItem="TAL-Hl-eJ1" secondAttribute="leading" constant="174" id="yfH-LU-RTH"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a2i-If-Bhu">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fnW-cV-OqX">
@@ -244,13 +260,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OY8-36-iju">
-                                <rect key="frame" x="20" y="106" width="374" height="756"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OY8-36-iju">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M32-6d-Gki"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OY8-36-iju" secondAttribute="bottom" id="1kb-EK-DsQ"/>
+                            <constraint firstItem="OY8-36-iju" firstAttribute="trailing" secondItem="M32-6d-Gki" secondAttribute="trailing" id="3Ym-Ym-c0Z"/>
+                            <constraint firstItem="OY8-36-iju" firstAttribute="leading" secondItem="M32-6d-Gki" secondAttribute="leading" id="ITw-kQ-CTR"/>
+                            <constraint firstItem="OY8-36-iju" firstAttribute="top" secondItem="M32-6d-Gki" secondAttribute="top" id="Kif-As-WD0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Location" id="gfw-K6-ALy"/>
                 </viewController>
@@ -284,7 +305,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RCp-7F-8qi">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cntower" translatesAutoresizingMaskIntoConstraints="NO" id="RCp-7F-8qi">
                                                     <rect key="frame" x="0.0" y="0.0" width="170" height="162"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -325,6 +346,8 @@
     </scenes>
     <resources>
         <image name="Logo" width="360" height="360"/>
+        <image name="bnaff" width="266" height="190"/>
+        <image name="cntower" width="225" height="225"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
