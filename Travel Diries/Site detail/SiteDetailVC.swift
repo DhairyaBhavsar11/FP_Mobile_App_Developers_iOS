@@ -24,3 +24,25 @@ class SiteDetailVC: UIViewController {
         navigationBar.items = [item]
         navigationBar.topItem?.title = siteInfo?.siteTitle ?? ""
     }
+    
+    @objc func addTapped() {
+        self.navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction func btnLocationClick(_ sender: Any) {
+        
+        let locationVC = LocationVC(nibName: "LocationVC", bundle: nil)
+        locationVC.siteInfo = siteInfo
+        locationVC.index = index
+        self.navigationController?.pushViewController(locationVC, animated: true)
+        
+    }
+    
+    @IBAction func btnGalleryClick(_ sender: Any) {
+        let galleryVC = GalleryVC(nibName: "GalleryVC", bundle: nil)
+        galleryVC.siteInfo = siteInfo
+        galleryVC.index = index
+        self.navigationController?.pushViewController(galleryVC, animated: true)
+    }
+    
+}
