@@ -13,7 +13,7 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var arrSiteDetail : [SiteInfo] = []
+    var appSiteDetail : [Siteinfo] = []
 
 
 
