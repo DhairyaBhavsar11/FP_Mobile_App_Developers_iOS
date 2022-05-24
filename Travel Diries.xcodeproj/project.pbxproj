@@ -17,6 +17,10 @@
 		B62DDD1E2831FAC50030B1E3 /* Travel_DiriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62DDD1D2831FAC50030B1E3 /* Travel_DiriesUITests.swift */; };
 		B62DDD202831FAC50030B1E3 /* Travel_DiriesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62DDD1F2831FAC50030B1E3 /* Travel_DiriesUITestsLaunchTests.swift */; };
 		B67C3101283765C3002F13BD /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67C3100283765C3002F13BD /* CollectionViewCell.swift */; };
+		B69942EE283CB14300C23C94 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69942EA283CB14300C23C94 /* HomeCell.xib */; };
+		B69942EF283CB14300C23C94 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69942EB283CB14300C23C94 /* HomeVC.swift */; };
+		B69942F0283CB14300C23C94 /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B69942EC283CB14300C23C94 /* HomeVC.xib */; };
+		B69942F1283CB14300C23C94 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69942ED283CB14300C23C94 /* HomeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		B62DDD1D2831FAC50030B1E3 /* Travel_DiriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_DiriesUITests.swift; sourceTree = "<group>"; };
 		B62DDD1F2831FAC50030B1E3 /* Travel_DiriesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_DiriesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B67C3100283765C3002F13BD /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		B69942EA283CB14300C23C94 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeCell.xib; path = "../../../../Downloads/Jinesh/Travel Diaries/Travel Diries/Home/HomeCell.xib"; sourceTree = "<group>"; };
+		B69942EB283CB14300C23C94 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = "../../../../Downloads/Jinesh/Travel Diaries/Travel Diries/Home/HomeVC.swift"; sourceTree = "<group>"; };
+		B69942EC283CB14300C23C94 /* HomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeVC.xib; path = "../../../../Downloads/Jinesh/Travel Diaries/Travel Diries/Home/HomeVC.xib"; sourceTree = "<group>"; };
+		B69942ED283CB14300C23C94 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCell.swift; path = "../../../../Downloads/Jinesh/Travel Diaries/Travel Diries/Home/HomeCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		B62DDCFB2831FAC30030B1E3 /* Travel Diries */ = {
 			isa = PBXGroup;
 			children = (
+				B69942E9283CB11A00C23C94 /* Home */,
 				B62DDCFC2831FAC30030B1E3 /* AppDelegate.swift */,
 				B62DDCFE2831FAC30030B1E3 /* SceneDelegate.swift */,
 				B62DDD002831FAC30030B1E3 /* ViewController.swift */,
@@ -128,6 +137,17 @@
 				B62DDD1F2831FAC50030B1E3 /* Travel_DiriesUITestsLaunchTests.swift */,
 			);
 			path = "Travel DiriesUITests";
+			sourceTree = "<group>";
+		};
+		B69942E9283CB11A00C23C94 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B69942ED283CB14300C23C94 /* HomeCell.swift */,
+				B69942EA283CB14300C23C94 /* HomeCell.xib */,
+				B69942EB283CB14300C23C94 /* HomeVC.swift */,
+				B69942EC283CB14300C23C94 /* HomeVC.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +256,8 @@
 			files = (
 				B62DDD092831FAC50030B1E3 /* LaunchScreen.storyboard in Resources */,
 				B62DDD062831FAC50030B1E3 /* Assets.xcassets in Resources */,
+				B69942F0283CB14300C23C94 /* HomeVC.xib in Resources */,
+				B69942EE283CB14300C23C94 /* HomeCell.xib in Resources */,
 				B62DDD042831FAC30030B1E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B62DDD012831FAC30030B1E3 /* ViewController.swift in Sources */,
+				B69942EF283CB14300C23C94 /* HomeVC.swift in Sources */,
 				B62DDCFD2831FAC30030B1E3 /* AppDelegate.swift in Sources */,
 				B67C3101283765C3002F13BD /* CollectionViewCell.swift in Sources */,
+				B69942F1283CB14300C23C94 /* HomeCell.swift in Sources */,
 				B62DDCFF2831FAC30030B1E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
