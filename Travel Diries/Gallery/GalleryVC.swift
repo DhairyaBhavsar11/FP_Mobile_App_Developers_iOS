@@ -21,8 +21,10 @@ class GalleryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        siteInfo = appDelegate.arrSiteDetail[index!]
-        DataManager.instance.getDataFromUserDefault()
+//        siteInfo = appDelegate.arrSiteDetail[index!]
+//        DataManager.instance.getDataFromUserDefault()
+        
+        CoreDataHelper.instance.getTravelData()
         
         let item = UINavigationItem()
         item.rightBarButtonItem = UIBarButtonItem(title: "Add Photo", style: .plain, target: self, action: #selector(addPhotosTapped))
@@ -65,16 +67,22 @@ class GalleryVC: UIViewController {
 extension GalleryVC : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            let imgData = getImageData(img: image)
-            let localSite = appDelegate.arrSiteDetail[index!]
-            let site = localSite
-            if site.photos?.count == nil {
-                site.photos = [Data]()
-            }
-            site.photos?.append(imgData!)
             
-            appDelegate.arrSiteDetail[index!] = site
-            DataManager.instance.saveIntoUserDefault()
+            let obj = appDelegate.arrTravelData[index!] as? LocationEntity
+            let siteName = obj?.siteName ?? ""
+            CoreDataHelper.instance.updateImage(title: siteName, image: image)
+            CoreDataHelper.instance.getTravelData()
+            
+//            let imgData = getImageData(img: image)
+//            let localSite = appDelegate.arrSiteDetail[index!]
+//            let site = localSite
+//            if site.photos?.count == nil {
+//                site.photos = [Data]()
+//            }
+//            site.photos?.append(imgData!)
+//
+//            appDelegate.arrSiteDetail[index!] = site
+//            DataManager.instance.saveIntoUserDefault()
         }
         collectionView.reloadData()
         picker.dismiss(animated: true, completion: nil);
@@ -98,15 +106,24 @@ extension GalleryVC : UINavigationControllerDelegate, UIImagePickerControllerDel
 
 extension GalleryVC : UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let objLocation = appDelegate.arrTravelData[index!] as? LocationEntity
+        let arrImage = objLocation?.sitePhotos as? [UIImage]
+        if let arr = arrImage {
+            return arr.count
+        } else {
+            return 0
+        }
         
-        return appDelegate.arrSiteDetail[index!].photos?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCell", for: indexPath) as! GalleryCell
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 2.0
-        cell.img.image = loadImage(data: appDelegate.arrSiteDetail[index!].photos![indexPath.row])
+//        cell.img.image = loadImage(data: appDelegate.arrSiteDetail[index!].photos![indexPath.row])
+        let objLocation = appDelegate.arrTravelData[index!] as? LocationEntity
+        let arrImage = objLocation?.sitePhotos as? [UIImage]
+        cell.img.image = arrImage![indexPath.row]
         return cell
     }
     

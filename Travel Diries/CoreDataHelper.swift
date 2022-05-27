@@ -76,6 +76,35 @@ class CoreDataHelper {
         }
     }
     
+    func updateImage(title : String, image : UIImage) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LocationEntity")
+        fetchRequest.predicate = NSPredicate(format: "siteName = %@", title)
+        
+        let managedContext =
+        appDelegate.persistentContainer.viewContext
+        do {
+            let res = try managedContext.fetch(fetchRequest)
+            if let arr =  res as? [NSManagedObject] {
+                if arr.count != 0 {
+                    let managedObject = arr[0]
+                    let obj = managedObject as! LocationEntity
+                    if obj.sitePhotos == nil {
+                        var arrImg : [UIImage] = []
+                        arrImg.append(image)
+                        obj.sitePhotos = arrImg as NSObject
+                    } else {
+                        var arrImg = obj.sitePhotos as! [UIImage]
+                        arrImg.append(image)
+                        obj.sitePhotos = arrImg as NSObject
+                    }
+                    try managedContext.save()
+                }
+            }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
     func getTravelData() {
         appDelegate.arrTravelData.removeAll()
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
