@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -13,6 +14,7 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var arrSiteDetail : [SiteInfo] = []
+    var arrTravelData : [NSManagedObject] = []
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -33,6 +35,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    // MARK: - Core Data stack
+    lazy var persistentContainer: NSPersistentContainer = {
+      let container = NSPersistentContainer(name: "TravelModel")
+      container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        if let error = error as NSError? {
+          fatalError("Unresolved error \(error), \(error.userInfo)")
+        }
+      })
+      return container
+    }()
 }
 

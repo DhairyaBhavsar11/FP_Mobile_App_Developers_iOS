@@ -11,6 +11,8 @@
 		AC2FBBD52840557C00CCC9EE /* GalleryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC2FBBD12840557C00CCC9EE /* GalleryCell.xib */; };
 		AC2FBBD62840557C00CCC9EE /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FBBD22840557C00CCC9EE /* GalleryVC.swift */; };
 		AC2FBBD72840557C00CCC9EE /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FBBD32840557C00CCC9EE /* GalleryCell.swift */; };
+		AC2FBBDA28405E5000CCC9EE /* TravelModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC2FBBD828405E5000CCC9EE /* TravelModel.xcdatamodeld */; };
+		AC2FBBDC2840603300CCC9EE /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FBBDB2840603300CCC9EE /* CoreDataHelper.swift */; };
 		ACD0D7B0284054060065EE28 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACD0D7AC284054060065EE28 /* HomeCell.xib */; };
 		ACD0D7B1284054060065EE28 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0D7AD284054060065EE28 /* HomeCell.swift */; };
 		ACD0D7B2284054060065EE28 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0D7AE284054060065EE28 /* HomeVC.swift */; };
@@ -54,6 +56,8 @@
 		AC2FBBD12840557C00CCC9EE /* GalleryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryCell.xib; sourceTree = "<group>"; };
 		AC2FBBD22840557C00CCC9EE /* GalleryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
 		AC2FBBD32840557C00CCC9EE /* GalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		AC2FBBD928405E5000CCC9EE /* TravelModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelModel.xcdatamodel; sourceTree = "<group>"; };
+		AC2FBBDB2840603300CCC9EE /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		ACD0D7AC284054060065EE28 /* HomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		ACD0D7AD284054060065EE28 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		ACD0D7AE284054060065EE28 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				B62DDD052831FAC50030B1E3 /* Assets.xcassets */,
 				B62DDD072831FAC50030B1E3 /* LaunchScreen.storyboard */,
 				B62DDD0A2831FAC50030B1E3 /* Info.plist */,
+				AC2FBBD828405E5000CCC9EE /* TravelModel.xcdatamodeld */,
+				AC2FBBDB2840603300CCC9EE /* CoreDataHelper.swift */,
 			);
 			path = "Travel Diries";
 			sourceTree = "<group>";
@@ -345,6 +351,8 @@
 				ACD0D7B2284054060065EE28 /* HomeVC.swift in Sources */,
 				B69942F6283CB55A00C23C94 /* SiteDetailVC.swift in Sources */,
 				B62DDCFD2831FAC30030B1E3 /* AppDelegate.swift in Sources */,
+				AC2FBBDA28405E5000CCC9EE /* TravelModel.xcdatamodeld in Sources */,
+				AC2FBBDC2840603300CCC9EE /* CoreDataHelper.swift in Sources */,
 				ACD0D7B9284054790065EE28 /* LocationVC.swift in Sources */,
 				B67C3101283765C3002F13BD /* CollectionViewCell.swift in Sources */,
 				ACD0D7BC284054830065EE28 /* DataManager.swift in Sources */,
@@ -690,6 +698,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC2FBBD828405E5000CCC9EE /* TravelModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC2FBBD928405E5000CCC9EE /* TravelModel.xcdatamodel */,
+			);
+			currentVersion = AC2FBBD928405E5000CCC9EE /* TravelModel.xcdatamodel */;
+			path = TravelModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B62DDCF12831FAC30030B1E3 /* Project object */;
 }

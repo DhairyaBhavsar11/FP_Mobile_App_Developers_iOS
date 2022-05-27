@@ -65,7 +65,7 @@ class GalleryVC: UIViewController {
 extension GalleryVC : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            var imgData = getImageData(img: image)
+            let imgData = getImageData(img: image)
             let localSite = appDelegate.arrSiteDetail[index!]
             let site = localSite
             if site.photos?.count == nil {
@@ -81,7 +81,7 @@ extension GalleryVC : UINavigationControllerDelegate, UIImagePickerControllerDel
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
-        var imgData = getImageData(img: image)
+        let imgData = getImageData(img: image)
         let localSite = appDelegate.arrSiteDetail[index!]
         let site = localSite
         site.photos?.append(imgData!)

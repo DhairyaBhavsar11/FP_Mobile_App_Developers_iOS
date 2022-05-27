@@ -7,45 +7,6 @@
 
 import Foundation
 
-struct SiteDetail : Codable {
-    let siteTitle : String?
-    let siteLocation : SiteLocation?
-    let photos : [String]?
-
-    enum CodingKeys: String, CodingKey {
-
-        case siteTitle = "siteTitle"
-        case siteLocation = "siteLocation"
-        case photos = "photos"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        siteTitle = try values.decodeIfPresent(String.self, forKey: .siteTitle)
-        siteLocation = try values.decodeIfPresent(SiteLocation.self, forKey: .siteLocation)
-        photos = try values.decodeIfPresent([String].self, forKey: .photos)
-    }
-}
-
-struct SiteLocation : Codable {
-    let lat : Double?
-    let long : Double?
-
-    enum CodingKeys: String, CodingKey {
-
-        case lat = "lat"
-        case long = "long"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        lat = try values.decodeIfPresent(Double.self, forKey: .lat)
-        long = try values.decodeIfPresent(Double.self, forKey: .long)
-    }
-
-}
-
-
 class SiteInfo : NSObject, NSCoding {
     
     var siteTitle : String? = nil
@@ -102,7 +63,7 @@ class DataManager {
     static var instance = DataManager()
     
     func saveIntoUserDefault() {
-        var userDefaults = UserDefaults.standard
+        let userDefaults = UserDefaults.standard
         let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: appDelegate.arrSiteDetail)
         userDefaults.set(encodedData, forKey: "SiteDetails")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -111,7 +72,7 @@ class DataManager {
     }
     
     func getDataFromUserDefault() {
-        var userDefaults = UserDefaults.standard
+        let userDefaults = UserDefaults.standard
         let decoded  = userDefaults.data(forKey: "SiteDetails")
         if decoded != nil {
             let decodedTeams = NSKeyedUnarchiver.unarchiveObject(with: decoded!) as! [SiteInfo]

@@ -14,7 +14,8 @@ class LocationVC: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var map: MKMapView!
     
-    var siteInfo :  SiteInfo?
+//    var siteInfo :  SiteInfo?
+    
     var index : Int?
     
     let span = MKCoordinateSpan.init(latitudeDelta: 0.01, longitudeDelta:
@@ -25,17 +26,17 @@ class LocationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        siteInfo = appDelegate.arrSiteDetail[index!]
+        var locationEntity = appDelegate.arrTravelData[index!] as! LocationEntity
         let item = UINavigationItem()
         item.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(addTapped))
-        if siteInfo?.siteLocation == nil {
+        if locationEntity.siteLat == 0.0 {
             item.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveTapped))
         }
         navigationBar.items = [item]
         
-        navigationBar.topItem?.title = "\(siteInfo?.siteTitle ?? "")'s Location"
+        navigationBar.topItem?.title = "\(locationEntity.siteName ?? "")'s Location"
 
-        var coordinate = CLLocationCoordinate2D(latitude: siteInfo?.siteLocation?.lat ?? 00, longitude: siteInfo?.siteLocation?.long ?? 00)
+        let coordinate = CLLocationCoordinate2D(latitude: locationEntity.siteLat ?? 0.0, longitude: locationEntity.siteLong ?? 0.0)
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
@@ -43,7 +44,7 @@ class LocationVC: UIViewController {
         map.setRegion(region, animated: true)
         map.addAnnotation(annotation)
         
-        if siteInfo?.siteLocation == nil {
+        if locationEntity.siteLat == 0.0 {
             print("Site pin is empty")
             if (CLLocationManager.locationServicesEnabled())
             {
@@ -64,14 +65,16 @@ class LocationVC: UIViewController {
 				    
     @objc func saveTapped() {
         print("Save tapped")
-        print("Lat : \(locationManager.location?.coordinate.latitude) , long : \(locationManager.location?.coordinate.longitude)")
         
-        let localSite = appDelegate.arrSiteDetail[index!]
-        let site = localSite
-        site.siteLocation = SiteCordinates(lat: locationManager.location?.coordinate.latitude ?? 0.0, long: locationManager.location?.coordinate.longitude ?? 0.0)
+//        let localSite = appDelegate.arrSiteDetail[index!]
+//        let site = localSite
+//        site.siteLocation = SiteCordinates(lat: locationManager.location?.coordinate.latitude ?? 0.0, long: locationManager.location?.coordinate.longitude ?? 0.0)
+//
+//        appDelegate.arrSiteDetail[index!] = site
+//        DataManager.instance.saveIntoUserDefault()
         
-        appDelegate.arrSiteDetail[index!] = site
-        DataManager.instance.saveIntoUserDefault()
+        CoreDataHelper.instance.updateLocation(title: (appDelegate.arrTravelData[index!] as? LocationEntity)?.siteName ?? "", lat: locationManager.location?.coordinate.latitude ?? 0.0, long: locationManager.location?.coordinate.longitude ?? 0.0)
+        
         self.navigationController?.popViewController(animated: true)
     }
 }
@@ -83,7 +86,7 @@ extension LocationVC : CLLocationManagerDelegate {
             let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
             self.map.setRegion(region, animated: true)
             
-            var coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
             map.addAnnotation(annotation)

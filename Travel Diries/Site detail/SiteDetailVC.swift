@@ -17,7 +17,7 @@ class SiteDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        siteInfo = appDelegate.arrSiteDetail[index!]
+//        siteInfo = appDelegate.arrSiteDetail[index!]
         
         let item = UINavigationItem()
         item.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(addTapped))
@@ -32,7 +32,7 @@ class SiteDetailVC: UIViewController {
     @IBAction func btnLocationClick(_ sender: Any) {
         
         let locationVC = LocationVC(nibName: "LocationVC", bundle: nil)
-        locationVC.siteInfo = siteInfo
+//        locationVC.siteInfo = siteInfo
         locationVC.index = index
         self.navigationController?.pushViewController(locationVC, animated: true)
         

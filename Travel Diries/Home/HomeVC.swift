@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeVC: UIViewController {
 
@@ -16,6 +17,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
 
         DataManager.instance.getDataFromUserDefault()
+        CoreDataHelper.instance.getTravelData()
         
         self.navigationController?.navigationBar.isHidden = true
         
@@ -24,7 +26,8 @@ class HomeVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        DataManager.instance.getDataFromUserDefault()
+//        DataManager.instance.getDataFromUserDefault()
+        CoreDataHelper.instance.getTravelData()
         collectionView.reloadData()
     }
 
@@ -41,28 +44,31 @@ class HomeVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+   
+    
     func savePlace(title : String) {
-        var objSiteDetail = SiteInfo(siteTitle: title, siteLocation: nil, photos: nil)
-        appDelegate.arrSiteDetail.append(objSiteDetail)
-        collectionView.reloadData()
-        DataManager.instance.saveIntoUserDefault()
+//        let objSiteDetail = SiteInfo(siteTitle: title, siteLocation: nil, photos: nil)
+//        appDelegate.arrSiteDetail.append(objSiteDetail)
+//        collectionView.reloadData()
+//        DataManager.instance.saveIntoUserDefault()
         
+        CoreDataHelper.instance.save(name: title)
+        CoreDataHelper.instance.getTravelData()
+        collectionView.reloadData()
     }
-    
-    
-    
 }
 
 extension HomeVC : UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return appDelegate.arrSiteDetail.count
+        return appDelegate.arrTravelData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomeCell
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 2.0
-        cell.lblSiteName.text = appDelegate.arrSiteDetail[indexPath.row].siteTitle ?? ""
+        let objEntity = appDelegate.arrTravelData[indexPath.row] as? LocationEntity
+        cell.lblSiteName.text = objEntity?.siteName ?? ""
         return cell
     }
     
@@ -72,7 +78,7 @@ extension HomeVC : UICollectionViewDataSource, UICollectionViewDelegate , UIColl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let siteDetailVC = SiteDetailVC(nibName: "SiteDetailVC", bundle: nil)
-        siteDetailVC.siteInfo = appDelegate.arrSiteDetail[indexPath.row]
+//        siteDetailVC.siteInfo = appDelegate.arrSiteDetail[indexPath.row]
         siteDetailVC.index = indexPath.row
         self.navigationController?.pushViewController(siteDetailVC, animated: true)
     }
