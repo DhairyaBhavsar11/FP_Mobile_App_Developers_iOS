@@ -20,7 +20,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         view.addSubview(imageView)
         DispatchQueue.main.asyncAfter(deadline: .now()+3){
-            self.performSegue(withIdentifier: "MainScreen", sender: self)
+            let homeVC = HomeVC(nibName: "HomeVC", bundle: nil)
+            self.navigationController?.pushViewController(homeVC, animated: true)
+//            self.performSegue(withIdentifier: "MainScreen", sender: self)
         }
     }
     
@@ -28,7 +30,7 @@ class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
         imageView.center = view.center
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+1.5){
+        DispatchQueue.main.asyncAfter(deadline: .now()+0){
             self.animate()
         }
     }

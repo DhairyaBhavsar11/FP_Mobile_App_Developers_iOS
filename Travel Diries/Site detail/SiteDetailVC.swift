@@ -2,7 +2,7 @@
 //  SiteDetailVC.swift
 //  Travel Diries
 //
-//  Created by dhairya bhavsar on 2022-05-24.
+//  Created by Vraj Patel on 21/05/22.
 //
 
 import UIKit

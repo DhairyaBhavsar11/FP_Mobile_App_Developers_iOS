@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SiteDetailVC" customModule="Travel_Diries" customModuleProvider="target">
+            <connections>
+                <outlet property="navigationBar" destination="imm-Af-BUp" id="7lW-Ps-6vV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imm-Af-BUp">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="Title" id="3yc-jk-1uo">
+                            <barButtonItem key="backBarButtonItem" title="Back" id="AHl-YG-vuH"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuB-tv-kSL">
+                    <rect key="frame" x="0.0" y="88" width="414" height="163.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50i-6g-rTt">
+                            <rect key="frame" x="0.0" y="0.0" width="206.5" height="163.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Location"/>
+                            <connections>
+                                <action selector="btnLocationClick:" destination="-1" eventType="touchUpInside" id="KFl-lC-Otc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNd-tH-QFr">
+                            <rect key="frame" x="207.5" y="0.0" width="206.5" height="163.5"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Gallery"/>
+                            <connections>
+                                <action selector="btnGalleryClick:" destination="-1" eventType="touchUpInside" id="fCb-cd-FIg"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="xNd-tH-QFr" secondAttribute="trailing" id="0LV-TD-B0j"/>
+                        <constraint firstItem="50i-6g-rTt" firstAttribute="leading" secondItem="OuB-tv-kSL" secondAttribute="leading" id="0iu-K0-r2d"/>
+                        <constraint firstItem="50i-6g-rTt" firstAttribute="top" secondItem="OuB-tv-kSL" secondAttribute="top" id="0tr-5d-aUH"/>
+                        <constraint firstAttribute="bottom" secondItem="50i-6g-rTt" secondAttribute="bottom" id="2N1-cR-CTc"/>
+                        <constraint firstItem="xNd-tH-QFr" firstAttribute="top" secondItem="OuB-tv-kSL" secondAttribute="top" id="FQE-hz-hhR"/>
+                        <constraint firstItem="xNd-tH-QFr" firstAttribute="leading" secondItem="50i-6g-rTt" secondAttribute="trailing" constant="1" id="NWG-66-gjS"/>
+                        <constraint firstAttribute="bottom" secondItem="xNd-tH-QFr" secondAttribute="bottom" id="fsc-w5-HIe"/>
+                        <constraint firstItem="xNd-tH-QFr" firstAttribute="width" secondItem="50i-6g-rTt" secondAttribute="width" id="hvG-3a-FXr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OuB-tv-kSL" secondAttribute="trailing" id="EKp-F1-JvL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="imm-Af-BUp" secondAttribute="leading" id="Hjr-FF-lGE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="imm-Af-BUp" secondAttribute="trailing" id="QjH-Ey-sCp"/>
+                <constraint firstItem="OuB-tv-kSL" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.2" id="QvY-hZ-RPV"/>
+                <constraint firstItem="OuB-tv-kSL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tff-tI-9w7"/>
+                <constraint firstItem="OuB-tv-kSL" firstAttribute="top" secondItem="imm-Af-BUp" secondAttribute="bottom" id="azs-Zc-BDs"/>
+                <constraint firstItem="imm-Af-BUp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kUC-av-FYm"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="99"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
