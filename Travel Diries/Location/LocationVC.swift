@@ -66,13 +66,6 @@ class LocationVC: UIViewController {
     @objc func saveTapped() {
         print("Save tapped")
         
-//        let localSite = appDelegate.arrSiteDetail[index!]
-//        let site = localSite
-//        site.siteLocation = SiteCordinates(lat: locationManager.location?.coordinate.latitude ?? 0.0, long: locationManager.location?.coordinate.longitude ?? 0.0)
-//
-//        appDelegate.arrSiteDetail[index!] = site
-//        DataManager.instance.saveIntoUserDefault()
-        
         CoreDataHelper.instance.updateLocation(title: (appDelegate.arrTravelData[index!] as? LocationEntity)?.siteName ?? "", lat: locationManager.location?.coordinate.latitude ?? 0.0, long: locationManager.location?.coordinate.longitude ?? 0.0)
         
         self.navigationController?.popViewController(animated: true)

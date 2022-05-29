@@ -13,7 +13,6 @@ let appDelegate = UIApplication.shared.delegate as! AppDelegate
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-//    var arrSiteDetail : [SiteInfo] = []
     var arrTravelData : [NSManagedObject] = []
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

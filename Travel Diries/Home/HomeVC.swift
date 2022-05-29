@@ -25,7 +25,6 @@ class HomeVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        DataManager.instance.getDataFromUserDefault()
         CoreDataHelper.instance.getTravelData()
         collectionView.reloadData()
     }
@@ -46,10 +45,6 @@ class HomeVC: UIViewController {
    
     
     func savePlace(title : String) {
-//        let objSiteDetail = SiteInfo(siteTitle: title, siteLocation: nil, photos: nil)
-//        appDelegate.arrSiteDetail.append(objSiteDetail)
-//        collectionView.reloadData()
-//        DataManager.instance.saveIntoUserDefault()
         
         CoreDataHelper.instance.save(name: title)
         CoreDataHelper.instance.getTravelData()

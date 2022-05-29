@@ -13,33 +13,21 @@ class EntityLocation : NSManagedObject {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<EntityLocation> {
         return NSFetchRequest<EntityLocation>(entityName: "LocationEntity")
     }
-
+    
     @NSManaged public var siteName: String?
     @NSManaged public var siteLat: NSNumber?
     @NSManaged public var siteLong: NSNumber?
     @NSManaged public var sitePhotos: UIImage?
 }
 
-class PhotoLocation : NSManagedObject {
-//    @nonobjc public class func fetchRequest() -> NSFetchRequest<PhotoLocation> {
-//        return NSFetchRequest<PhotoLocation>(entityName: "LocationPhoto")
-//    }
-
-    @NSManaged public var sitePhoto: Data?
-
-}
-
 class CoreDataHelper {
     static var instance : CoreDataHelper = CoreDataHelper()
     
-    
-    
     func save(name : String) {
-      
-      guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-        return
-      }
-      
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
         let managedContext =
         appDelegate.persistentContainer.viewContext
         

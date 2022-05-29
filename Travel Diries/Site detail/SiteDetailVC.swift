@@ -11,18 +11,17 @@ class SiteDetailVC: UIViewController {
 
     @IBOutlet weak var navigationBar: UINavigationBar!
     
-    var siteInfo : SiteInfo?
     var index : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        siteInfo = appDelegate.arrSiteDetail[index!]
         
+        let objLocation = appDelegate.arrTravelData[index!] as! LocationEntity
+
         let item = UINavigationItem()
         item.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(addTapped))
         navigationBar.items = [item]
-        navigationBar.topItem?.title = siteInfo?.siteTitle ?? ""
+        navigationBar.topItem?.title = objLocation.siteName ?? ""
     }
     
     @objc func addTapped() {
@@ -32,15 +31,13 @@ class SiteDetailVC: UIViewController {
     @IBAction func btnLocationClick(_ sender: Any) {
         
         let locationVC = LocationVC(nibName: "LocationVC", bundle: nil)
-//        locationVC.siteInfo = siteInfo
         locationVC.index = index
         self.navigationController?.pushViewController(locationVC, animated: true)
         
     }
     
     @IBAction func btnGalleryClick(_ sender: Any) {
-        let galleryVC = GalleryVC(nibName: "GalleryVC", bundle: nil)
-        galleryVC.siteInfo = siteInfo
+        let galleryVC = GalleryVC(nibName: "GalleryVC", bundle: nil)      
         galleryVC.index = index
         self.navigationController?.pushViewController(galleryVC, animated: true)
     }

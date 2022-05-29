@@ -52,32 +52,4 @@ class SiteCordinates : NSObject, NSCoding {
         let name = aDecoder.decodeObject(forKey: "long") as! Double
         self.init(lat: id, long: name)
     }
-    
-   
-
-    
-}
-
-class DataManager {
-    
-    static var instance = DataManager()
-    
-//    func saveIntoUserDefault() {
-//        let userDefaults = UserDefaults.standard
-//        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: appDelegate.arrSiteDetail)
-//        userDefaults.set(encodedData, forKey: "SiteDetails")
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-//            userDefaults.synchronize()
-//        }
-//    }
-//    
-//    func getDataFromUserDefault() {
-//        let userDefaults = UserDefaults.standard
-//        let decoded  = userDefaults.data(forKey: "SiteDetails")
-//        if decoded != nil {
-//            let decodedTeams = NSKeyedUnarchiver.unarchiveObject(with: decoded!) as! [SiteInfo]
-//            appDelegate.arrSiteDetail.removeAll()
-//            appDelegate.arrSiteDetail = decodedTeams
-//        }
-//    }
 }
