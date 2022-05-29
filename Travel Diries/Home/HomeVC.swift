@@ -16,7 +16,6 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DataManager.instance.getDataFromUserDefault()
         CoreDataHelper.instance.getTravelData()
         
         self.navigationController?.navigationBar.isHidden = true

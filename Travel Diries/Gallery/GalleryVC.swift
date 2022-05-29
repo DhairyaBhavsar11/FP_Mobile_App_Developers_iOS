@@ -87,21 +87,6 @@ extension GalleryVC : UINavigationControllerDelegate, UIImagePickerControllerDel
         collectionView.reloadData()
         picker.dismiss(animated: true, completion: nil);
     }
-    
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
-        let imgData = getImageData(img: image)
-        let localSite = appDelegate.arrSiteDetail[index!]
-        let site = localSite
-        site.photos?.append(imgData!)
-        
-        appDelegate.arrSiteDetail[index!] = site
-        DataManager.instance.saveIntoUserDefault()
-        
-        picker.dismiss(animated: true, completion: { () -> Void in
-            
-        })
-        
-    }
 }
 
 extension GalleryVC : UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
