@@ -11,15 +11,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var imageView: UIImageView = {
+    private var imageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
         imageView.image = UIImage(named: "Logo")
         return imageView
     }()
 
+    //MARK: - UIViewcontroller methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         view.addSubview(imageView)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.7){
             let homeVC = HomeVC(nibName: "HomeVC", bundle: nil)
@@ -36,6 +38,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: - Custom methods
     private func animate(){
         UIView.animate(withDuration: 1) {
             let size = self.view.frame.size.width * 2

@@ -13,13 +13,16 @@ class HomeVC: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    //MARK: - UIviewcontroller methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        /// Fetching data to update the UI
         CoreDataHelper.instance.getTravelData()
-        
         self.navigationController?.navigationBar.isHidden = true
         
+        /// Initiallizing collection view cell
         self.collectionView.register(UINib(nibName: "HomeCell", bundle: nil), forCellWithReuseIdentifier: "HomeCell")
         collectionView.reloadData()
     }
@@ -29,23 +32,29 @@ class HomeVC: UIViewController {
         collectionView.reloadData()
     }
 
+    //MARK: - Button click methods
+    
     @IBAction func btnAddSiteClick(_ sender: Any) {
+        
+        /// Presenting alert to enter place name
         let alert = UIAlertController(title: "Travel diaries", message: "Enter place name", preferredStyle: .alert)
+        
         alert.addTextField { (textField) in
             textField.placeholder = "Plese enter name here"
         }
+        
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0]
             print("Text field: \(textField!.text!)")
             self.savePlace(title: textField!.text!)
         }))
+        
         self.present(alert, animated: true, completion: nil)
     }
     
-   
-    
+    //MARK: - Custom methods
     func savePlace(title : String) {
-        
+        /// Saving name and fetching data to update the UI
         CoreDataHelper.instance.save(name: title)
         CoreDataHelper.instance.getTravelData()
         collectionView.reloadData()
@@ -53,6 +62,7 @@ class HomeVC: UIViewController {
 }
 
 extension HomeVC : UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return appDelegate.arrTravelData.count
     }
@@ -72,7 +82,6 @@ extension HomeVC : UICollectionViewDataSource, UICollectionViewDelegate , UIColl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let siteDetailVC = SiteDetailVC(nibName: "SiteDetailVC", bundle: nil)
-//        siteDetailVC.siteInfo = appDelegate.arrSiteDetail[indexPath.row]
         siteDetailVC.index = indexPath.row
         self.navigationController?.pushViewController(siteDetailVC, animated: true)
     }

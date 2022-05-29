@@ -13,6 +13,8 @@ class SiteDetailVC: UIViewController {
     
     var index : Int?
     
+    //MARK: - UIViewcontroller methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,12 +26,13 @@ class SiteDetailVC: UIViewController {
         navigationBar.topItem?.title = objLocation.siteName ?? ""
     }
     
+    //MARK: - Button click methods
     @objc func addTapped() {
         self.navigationController?.popViewController(animated: true)
     }
 
     @IBAction func btnLocationClick(_ sender: Any) {
-        
+        /// Redirecting to location screen
         let locationVC = LocationVC(nibName: "LocationVC", bundle: nil)
         locationVC.index = index
         self.navigationController?.pushViewController(locationVC, animated: true)
@@ -37,6 +40,7 @@ class SiteDetailVC: UIViewController {
     }
     
     @IBAction func btnGalleryClick(_ sender: Any) {
+        /// Redirecting to gallery  screen
         let galleryVC = GalleryVC(nibName: "GalleryVC", bundle: nil)      
         galleryVC.index = index
         self.navigationController?.pushViewController(galleryVC, animated: true)

@@ -13,9 +13,11 @@ class GalleryVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var imagePicker = UIImagePickerController()
+    private var imagePicker = UIImagePickerController()
     
     var index : Int?
+    
+    //MARK: - UIViewcontroller methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,8 @@ class GalleryVC: UIViewController {
         collectionView.reloadData()
     }
     
+    //MARK: - Button click methods
+    
     @objc func addTapped() {
         self.navigationController?.popViewController(animated: true)
     }
@@ -49,9 +53,10 @@ class GalleryVC: UIViewController {
 }
 
 extension GalleryVC : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            
+            ///  Saving selected image into core data
             let obj = appDelegate.arrTravelData[index!] as? LocationEntity
             let siteName = obj?.siteName ?? ""
             CoreDataHelper.instance.updateImage(title: siteName, image: image)
@@ -63,6 +68,7 @@ extension GalleryVC : UINavigationControllerDelegate, UIImagePickerControllerDel
 }
 
 extension GalleryVC : UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let objLocation = appDelegate.arrTravelData[index!] as? LocationEntity
         let arrImage = objLocation?.sitePhotos as? [UIImage]
@@ -71,7 +77,6 @@ extension GalleryVC : UICollectionViewDataSource, UICollectionViewDelegate , UIC
         } else {
             return 0
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

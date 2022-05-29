@@ -9,20 +9,11 @@ import Foundation
 import CoreData
 import UIKit
 
-class EntityLocation : NSManagedObject {
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<EntityLocation> {
-        return NSFetchRequest<EntityLocation>(entityName: "LocationEntity")
-    }
-    
-    @NSManaged public var siteName: String?
-    @NSManaged public var siteLat: NSNumber?
-    @NSManaged public var siteLong: NSNumber?
-    @NSManaged public var sitePhotos: UIImage?
-}
-
 class CoreDataHelper {
+    
     static var instance : CoreDataHelper = CoreDataHelper()
     
+    /// To save name into core data
     func save(name : String) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -42,6 +33,7 @@ class CoreDataHelper {
         }
     }
     
+    /// To update location's lat and long values into coredata as per Site
     func updateLocation(title : String, lat : Double, long : Double) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LocationEntity")
         fetchRequest.predicate = NSPredicate(format: "siteName = %@", title)
@@ -64,6 +56,7 @@ class CoreDataHelper {
         }
     }
     
+    /// To update image in core data as per Site
     func updateImage(title : String, image : UIImage) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LocationEntity")
         fetchRequest.predicate = NSPredicate(format: "siteName = %@", title)
@@ -93,6 +86,7 @@ class CoreDataHelper {
         }
     }
     
+    /// To get travel data from core data and store into array
     func getTravelData() {
         appDelegate.arrTravelData.removeAll()
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {

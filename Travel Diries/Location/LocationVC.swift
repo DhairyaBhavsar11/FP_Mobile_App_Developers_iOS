@@ -14,19 +14,26 @@ class LocationVC: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var map: MKMapView!
     
-//    var siteInfo :  SiteInfo?
-    
     var index : Int?
     
-    let span = MKCoordinateSpan.init(latitudeDelta: 0.01, longitudeDelta:
+    private let span = MKCoordinateSpan.init(latitudeDelta: 0.01, longitudeDelta:
     0.01)
     
-    var locationManager: CLLocationManager!
+    private var locationManager: CLLocationManager!
+    
+    //MARK: - UIViewcontroller methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var locationEntity = appDelegate.arrTravelData[index!] as! LocationEntity
+        setUpInitialUI()
+        setUpMap()
+    }
+    
+    //MARK: - Custom methods
+
+    private func setUpInitialUI() {
+        let locationEntity = appDelegate.arrTravelData[index!] as! LocationEntity
         let item = UINavigationItem()
         item.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(addTapped))
         if locationEntity.siteLat == 0.0 {
@@ -35,8 +42,11 @@ class LocationVC: UIViewController {
         navigationBar.items = [item]
         
         navigationBar.topItem?.title = "\(locationEntity.siteName ?? "")'s Location"
-
-        let coordinate = CLLocationCoordinate2D(latitude: locationEntity.siteLat ?? 0.0, longitude: locationEntity.siteLong ?? 0.0)
+    }
+    
+    private func setUpMap() {
+        let locationEntity = appDelegate.arrTravelData[index!] as! LocationEntity
+        let coordinate = CLLocationCoordinate2D(latitude: locationEntity.siteLat , longitude: locationEntity.siteLong)
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
@@ -45,9 +55,8 @@ class LocationVC: UIViewController {
         map.addAnnotation(annotation)
         
         if locationEntity.siteLat == 0.0 {
-            print("Site pin is empty")
-            if (CLLocationManager.locationServicesEnabled())
-            {
+            /// Requesting permission for location
+            if (CLLocationManager.locationServicesEnabled()) {
                 locationManager = CLLocationManager()
                 locationManager.delegate = self
                 locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -58,21 +67,21 @@ class LocationVC: UIViewController {
             print("Site pin is already stored")
         }
     }
-
+    
+    //MARK: - Button click methods
+    
     @objc func addTapped() {
         self.navigationController?.popViewController(animated: true)
     }
 				    
     @objc func saveTapped() {
-        print("Save tapped")
-        
         CoreDataHelper.instance.updateLocation(title: (appDelegate.arrTravelData[index!] as? LocationEntity)?.siteName ?? "", lat: locationManager.location?.coordinate.latitude ?? 0.0, long: locationManager.location?.coordinate.longitude ?? 0.0)
-        
         self.navigationController?.popViewController(animated: true)
     }
 }
 
 extension LocationVC : CLLocationManagerDelegate {
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last{
             let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
@@ -83,7 +92,6 @@ extension LocationVC : CLLocationManagerDelegate {
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
             map.addAnnotation(annotation)
-            
         }
     }
 }

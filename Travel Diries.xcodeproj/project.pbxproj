@@ -20,7 +20,6 @@
 		ACD0D7B5284054680065EE28 /* SiteDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACD0D7B4284054680065EE28 /* SiteDetailVC.xib */; };
 		ACD0D7B9284054790065EE28 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0D7B7284054790065EE28 /* LocationVC.swift */; };
 		ACD0D7BA284054790065EE28 /* LocationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACD0D7B8284054790065EE28 /* LocationVC.xib */; };
-		ACD0D7BC284054830065EE28 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD0D7BB284054830065EE28 /* DataManager.swift */; };
 		B62DDCFD2831FAC30030B1E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62DDCFC2831FAC30030B1E3 /* AppDelegate.swift */; };
 		B62DDCFF2831FAC30030B1E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62DDCFE2831FAC30030B1E3 /* SceneDelegate.swift */; };
 		B62DDD012831FAC30030B1E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62DDD002831FAC30030B1E3 /* ViewController.swift */; };
@@ -65,7 +64,6 @@
 		ACD0D7B4284054680065EE28 /* SiteDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiteDetailVC.xib; sourceTree = "<group>"; };
 		ACD0D7B7284054790065EE28 /* LocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		ACD0D7B8284054790065EE28 /* LocationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationVC.xib; sourceTree = "<group>"; };
-		ACD0D7BB284054830065EE28 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B62DDCF92831FAC30030B1E3 /* Travel Diries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Diries.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62DDCFC2831FAC30030B1E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B62DDCFE2831FAC30030B1E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				B62DDD002831FAC30030B1E3 /* ViewController.swift */,
 				B62DDD022831FAC30030B1E3 /* Main.storyboard */,
 				B67C3100283765C3002F13BD /* CollectionViewCell.swift */,
-				ACD0D7BB284054830065EE28 /* DataManager.swift */,
 				B62DDD052831FAC50030B1E3 /* Assets.xcassets */,
 				B62DDD072831FAC50030B1E3 /* LaunchScreen.storyboard */,
 				B62DDD0A2831FAC50030B1E3 /* Info.plist */,
@@ -355,7 +352,6 @@
 				AC2FBBDC2840603300CCC9EE /* CoreDataHelper.swift in Sources */,
 				ACD0D7B9284054790065EE28 /* LocationVC.swift in Sources */,
 				B67C3101283765C3002F13BD /* CollectionViewCell.swift in Sources */,
-				ACD0D7BC284054830065EE28 /* DataManager.swift in Sources */,
 				B62DDCFF2831FAC30030B1E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

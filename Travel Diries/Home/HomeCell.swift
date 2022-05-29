@@ -10,6 +10,7 @@ import UIKit
 class HomeCell: UICollectionViewCell {
 
     @IBOutlet weak var lblSiteName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
