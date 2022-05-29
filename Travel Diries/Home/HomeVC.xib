@@ -20,16 +20,13 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJo-vI-cHm">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <items>
-                        <navigationItem title="My Travel Diaries" id="6aq-IV-eoZ"/>
-                    </items>
-                </navigationBar>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDB-0W-lWT">
                     <rect key="frame" x="103.5" y="108" width="207" height="31"/>
+                    <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Add Site"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Add Site">
+                        <color key="baseForegroundColor" red="0.020336782559752464" green="0.027916049584746361" blue="0.032423466444015503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="btnAddSiteClick:" destination="-1" eventType="touchUpInside" id="jgc-a6-Jxt"/>
                     </connections>
@@ -60,6 +57,12 @@
                         <constraint firstItem="OfD-Cc-q59" firstAttribute="top" secondItem="9iB-wQ-Kdo" secondAttribute="top" id="pMt-NG-80Z"/>
                     </constraints>
                 </view>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJo-vI-cHm">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <items>
+                        <navigationItem title="My Travel Diaries" id="6aq-IV-eoZ"/>
+                    </items>
+                </navigationBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

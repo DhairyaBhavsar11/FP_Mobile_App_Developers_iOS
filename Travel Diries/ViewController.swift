@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.addSubview(imageView)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7){
             let homeVC = HomeVC(nibName: "HomeVC", bundle: nil)
             self.navigationController?.pushViewController(homeVC, animated: true)
         }

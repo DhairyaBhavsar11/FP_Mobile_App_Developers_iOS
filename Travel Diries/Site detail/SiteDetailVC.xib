@@ -28,20 +28,26 @@
                     </items>
                 </navigationBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuB-tv-kSL">
-                    <rect key="frame" x="0.0" y="88" width="414" height="163.5"/>
+                    <rect key="frame" x="0.0" y="108" width="414" height="82"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50i-6g-rTt">
-                            <rect key="frame" x="0.0" y="0.0" width="206.5" height="163.5"/>
+                            <rect key="frame" x="10" y="0.0" width="192" height="82"/>
+                            <color key="backgroundColor" red="0.95302611589431763" green="0.26302728056907654" blue="0.0908941850066185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Location"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Location">
+                                <color key="baseForegroundColor" red="0.020336782559752464" green="0.027916049584746361" blue="0.032423466444015503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="btnLocationClick:" destination="-1" eventType="touchUpInside" id="KFl-lC-Otc"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNd-tH-QFr">
-                            <rect key="frame" x="207.5" y="0.0" width="206.5" height="163.5"/>
+                            <rect key="frame" x="212" y="0.0" width="192" height="82"/>
+                            <color key="backgroundColor" red="0.95302611589431763" green="0.26302728056907654" blue="0.0908941850066185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Gallery"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Gallery">
+                                <color key="baseForegroundColor" red="0.020336782559752464" green="0.027916049584746361" blue="0.032423466444015503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </buttonConfiguration>
                             <connections>
                                 <action selector="btnGalleryClick:" destination="-1" eventType="touchUpInside" id="fCb-cd-FIg"/>
                             </connections>
@@ -49,12 +55,12 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="xNd-tH-QFr" secondAttribute="trailing" id="0LV-TD-B0j"/>
-                        <constraint firstItem="50i-6g-rTt" firstAttribute="leading" secondItem="OuB-tv-kSL" secondAttribute="leading" id="0iu-K0-r2d"/>
+                        <constraint firstAttribute="trailing" secondItem="xNd-tH-QFr" secondAttribute="trailing" constant="10" id="0LV-TD-B0j"/>
+                        <constraint firstItem="50i-6g-rTt" firstAttribute="leading" secondItem="OuB-tv-kSL" secondAttribute="leading" constant="10" id="0iu-K0-r2d"/>
                         <constraint firstItem="50i-6g-rTt" firstAttribute="top" secondItem="OuB-tv-kSL" secondAttribute="top" id="0tr-5d-aUH"/>
                         <constraint firstAttribute="bottom" secondItem="50i-6g-rTt" secondAttribute="bottom" id="2N1-cR-CTc"/>
                         <constraint firstItem="xNd-tH-QFr" firstAttribute="top" secondItem="OuB-tv-kSL" secondAttribute="top" id="FQE-hz-hhR"/>
-                        <constraint firstItem="xNd-tH-QFr" firstAttribute="leading" secondItem="50i-6g-rTt" secondAttribute="trailing" constant="1" id="NWG-66-gjS"/>
+                        <constraint firstItem="xNd-tH-QFr" firstAttribute="leading" secondItem="50i-6g-rTt" secondAttribute="trailing" constant="10" id="NWG-66-gjS"/>
                         <constraint firstAttribute="bottom" secondItem="xNd-tH-QFr" secondAttribute="bottom" id="fsc-w5-HIe"/>
                         <constraint firstItem="xNd-tH-QFr" firstAttribute="width" secondItem="50i-6g-rTt" secondAttribute="width" id="hvG-3a-FXr"/>
                     </constraints>
@@ -66,9 +72,9 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OuB-tv-kSL" secondAttribute="trailing" id="EKp-F1-JvL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="imm-Af-BUp" secondAttribute="leading" id="Hjr-FF-lGE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="imm-Af-BUp" secondAttribute="trailing" id="QjH-Ey-sCp"/>
-                <constraint firstItem="OuB-tv-kSL" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.2" id="QvY-hZ-RPV"/>
+                <constraint firstItem="OuB-tv-kSL" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.1" id="QvY-hZ-RPV"/>
                 <constraint firstItem="OuB-tv-kSL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Tff-tI-9w7"/>
-                <constraint firstItem="OuB-tv-kSL" firstAttribute="top" secondItem="imm-Af-BUp" secondAttribute="bottom" id="azs-Zc-BDs"/>
+                <constraint firstItem="OuB-tv-kSL" firstAttribute="top" secondItem="imm-Af-BUp" secondAttribute="bottom" constant="20" id="azs-Zc-BDs"/>
                 <constraint firstItem="imm-Af-BUp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="kUC-av-FYm"/>
             </constraints>
             <point key="canvasLocation" x="139" y="99"/>
