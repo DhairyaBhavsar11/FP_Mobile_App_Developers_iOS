@@ -64,7 +64,7 @@
 		ACD0D7B4284054680065EE28 /* SiteDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiteDetailVC.xib; sourceTree = "<group>"; };
 		ACD0D7B7284054790065EE28 /* LocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		ACD0D7B8284054790065EE28 /* LocationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationVC.xib; sourceTree = "<group>"; };
-		B62DDCF92831FAC30030B1E3 /* Travel Diries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Travel Diries.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62DDCF92831FAC30030B1E3 /* FP_Mobile_App_Developers_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FP_Mobile_App_Developers_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62DDCFC2831FAC30030B1E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B62DDCFE2831FAC30030B1E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B62DDD002831FAC30030B1E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,9 +72,9 @@
 		B62DDD052831FAC50030B1E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B62DDD082831FAC50030B1E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B62DDD0A2831FAC50030B1E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B62DDD0F2831FAC50030B1E3 /* Travel DiriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travel DiriesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62DDD0F2831FAC50030B1E3 /* FP_Mobile_App_Developers_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FP_Mobile_App_Developers_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62DDD132831FAC50030B1E3 /* Travel_DiriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_DiriesTests.swift; sourceTree = "<group>"; };
-		B62DDD192831FAC50030B1E3 /* Travel DiriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Travel DiriesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62DDD192831FAC50030B1E3 /* FP_Mobile_App_Developers_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FP_Mobile_App_Developers_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62DDD1D2831FAC50030B1E3 /* Travel_DiriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_DiriesUITests.swift; sourceTree = "<group>"; };
 		B62DDD1F2831FAC50030B1E3 /* Travel_DiriesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Travel_DiriesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B67C3100283765C3002F13BD /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		B62DDCF02831FAC30030B1E3 = {
 			isa = PBXGroup;
 			children = (
-				B62DDCFB2831FAC30030B1E3 /* Travel Diries */,
+				B62DDCFB2831FAC30030B1E3 /* FP_Mobile_App_Developers_iOS */,
 				B62DDD122831FAC50030B1E3 /* Travel DiriesTests */,
 				B62DDD1C2831FAC50030B1E3 /* Travel DiriesUITests */,
 				B62DDCFA2831FAC30030B1E3 /* Products */,
@@ -139,14 +139,14 @@
 		B62DDCFA2831FAC30030B1E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B62DDCF92831FAC30030B1E3 /* Travel Diries.app */,
-				B62DDD0F2831FAC50030B1E3 /* Travel DiriesTests.xctest */,
-				B62DDD192831FAC50030B1E3 /* Travel DiriesUITests.xctest */,
+				B62DDCF92831FAC30030B1E3 /* FP_Mobile_App_Developers_iOS.app */,
+				B62DDD0F2831FAC50030B1E3 /* FP_Mobile_App_Developers_iOSTests.xctest */,
+				B62DDD192831FAC50030B1E3 /* FP_Mobile_App_Developers_iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B62DDCFB2831FAC30030B1E3 /* Travel Diries */ = {
+		B62DDCFB2831FAC30030B1E3 /* FP_Mobile_App_Developers_iOS */ = {
 			isa = PBXGroup;
 			children = (
 				AC2FBBCF2840557C00CCC9EE /* Gallery */,
@@ -164,7 +164,7 @@
 				AC2FBBD828405E5000CCC9EE /* TravelModel.xcdatamodeld */,
 				AC2FBBDB2840603300CCC9EE /* CoreDataHelper.swift */,
 			);
-			path = "Travel Diries";
+			path = FP_Mobile_App_Developers_iOS;
 			sourceTree = "<group>";
 		};
 		B62DDD122831FAC50030B1E3 /* Travel DiriesTests */ = {
@@ -207,9 +207,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B62DDCF82831FAC30030B1E3 /* Travel Diries */ = {
+		B62DDCF82831FAC30030B1E3 /* FP_Mobile_App_Developers_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B62DDD232831FAC50030B1E3 /* Build configuration list for PBXNativeTarget "Travel Diries" */;
+			buildConfigurationList = B62DDD232831FAC50030B1E3 /* Build configuration list for PBXNativeTarget "FP_Mobile_App_Developers_iOS" */;
 			buildPhases = (
 				B62DDCF52831FAC30030B1E3 /* Sources */,
 				B62DDCF62831FAC30030B1E3 /* Frameworks */,
@@ -219,14 +219,14 @@
 			);
 			dependencies = (
 			);
-			name = "Travel Diries";
+			name = FP_Mobile_App_Developers_iOS;
 			productName = "Travel Diries";
-			productReference = B62DDCF92831FAC30030B1E3 /* Travel Diries.app */;
+			productReference = B62DDCF92831FAC30030B1E3 /* FP_Mobile_App_Developers_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B62DDD0E2831FAC50030B1E3 /* Travel DiriesTests */ = {
+		B62DDD0E2831FAC50030B1E3 /* FP_Mobile_App_Developers_iOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B62DDD262831FAC50030B1E3 /* Build configuration list for PBXNativeTarget "Travel DiriesTests" */;
+			buildConfigurationList = B62DDD262831FAC50030B1E3 /* Build configuration list for PBXNativeTarget "FP_Mobile_App_Developers_iOSTests" */;
 			buildPhases = (
 				B62DDD0B2831FAC50030B1E3 /* Sources */,
 				B62DDD0C2831FAC50030B1E3 /* Frameworks */,
@@ -237,14 +237,14 @@
 			dependencies = (
 				B62DDD112831FAC50030B1E3 /* PBXTargetDependency */,
 			);
-			name = "Travel DiriesTests";
+			name = FP_Mobile_App_Developers_iOSTests;
 			productName = "Travel DiriesTests";
-			productReference = B62DDD0F2831FAC50030B1E3 /* Travel DiriesTests.xctest */;
+			productReference = B62DDD0F2831FAC50030B1E3 /* FP_Mobile_App_Developers_iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B62DDD182831FAC50030B1E3 /* Travel DiriesUITests */ = {
+		B62DDD182831FAC50030B1E3 /* FP_Mobile_App_Developers_iOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B62DDD292831FAC50030B1E3 /* Build configuration list for PBXNativeTarget "Travel DiriesUITests" */;
+			buildConfigurationList = B62DDD292831FAC50030B1E3 /* Build configuration list for PBXNativeTarget "FP_Mobile_App_Developers_iOSUITests" */;
 			buildPhases = (
 				B62DDD152831FAC50030B1E3 /* Sources */,
 				B62DDD162831FAC50030B1E3 /* Frameworks */,
@@ -255,9 +255,9 @@
 			dependencies = (
 				B62DDD1B2831FAC50030B1E3 /* PBXTargetDependency */,
 			);
-			name = "Travel DiriesUITests";
+			name = FP_Mobile_App_Developers_iOSUITests;
 			productName = "Travel DiriesUITests";
-			productReference = B62DDD192831FAC50030B1E3 /* Travel DiriesUITests.xctest */;
+			productReference = B62DDD192831FAC50030B1E3 /* FP_Mobile_App_Developers_iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -283,7 +283,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B62DDCF42831FAC30030B1E3 /* Build configuration list for PBXProject "Travel Diries" */;
+			buildConfigurationList = B62DDCF42831FAC30030B1E3 /* Build configuration list for PBXProject "FP_Mobile_App_Developers_iOS" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -296,9 +296,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B62DDCF82831FAC30030B1E3 /* Travel Diries */,
-				B62DDD0E2831FAC50030B1E3 /* Travel DiriesTests */,
-				B62DDD182831FAC50030B1E3 /* Travel DiriesUITests */,
+				B62DDCF82831FAC30030B1E3 /* FP_Mobile_App_Developers_iOS */,
+				B62DDD0E2831FAC50030B1E3 /* FP_Mobile_App_Developers_iOSTests */,
+				B62DDD182831FAC50030B1E3 /* FP_Mobile_App_Developers_iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -378,12 +378,12 @@
 /* Begin PBXTargetDependency section */
 		B62DDD112831FAC50030B1E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B62DDCF82831FAC30030B1E3 /* Travel Diries */;
+			target = B62DDCF82831FAC30030B1E3 /* FP_Mobile_App_Developers_iOS */;
 			targetProxy = B62DDD102831FAC50030B1E3 /* PBXContainerItemProxy */;
 		};
 		B62DDD1B2831FAC50030B1E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B62DDCF82831FAC30030B1E3 /* Travel Diries */;
+			target = B62DDCF82831FAC30030B1E3 /* FP_Mobile_App_Developers_iOS */;
 			targetProxy = B62DDD1A2831FAC50030B1E3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -531,7 +531,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PXS2AA62VT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Travel Diries/Info.plist";
+				INFOPLIST_FILE = FP_Mobile_App_Developers_iOS/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Program requires GPS to track cars and job orders";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Program requires GPS to track cars and job orders";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Program requires GPS to track cars and job orders";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -542,7 +545,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Major-Project.Travel-Diries";
+				PRODUCT_BUNDLE_IDENTIFIER = "Major-Projec.FP_Mobile_App_Developers_iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -559,7 +562,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PXS2AA62VT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Travel Diries/Info.plist";
+				INFOPLIST_FILE = FP_Mobile_App_Developers_iOS/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Program requires GPS to track cars and job orders";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Program requires GPS to track cars and job orders";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Program requires GPS to track cars and job orders";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -570,7 +576,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Major-Project.Travel-Diries";
+				PRODUCT_BUNDLE_IDENTIFIER = "Major-Projec.FP_Mobile_App_Developers_iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -594,7 +600,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travel Diries.app/Travel Diries";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FP_Mobile_App_Developers_iOS.app/FP_Mobile_App_Developers_iOS";
 			};
 			name = Debug;
 		};
@@ -614,7 +620,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Travel Diries.app/Travel Diries";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FP_Mobile_App_Developers_iOS.app/FP_Mobile_App_Developers_iOS";
 			};
 			name = Release;
 		};
@@ -657,7 +663,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B62DDCF42831FAC30030B1E3 /* Build configuration list for PBXProject "Travel Diries" */ = {
+		B62DDCF42831FAC30030B1E3 /* Build configuration list for PBXProject "FP_Mobile_App_Developers_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B62DDD212831FAC50030B1E3 /* Debug */,
@@ -666,7 +672,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B62DDD232831FAC50030B1E3 /* Build configuration list for PBXNativeTarget "Travel Diries" */ = {
+		B62DDD232831FAC50030B1E3 /* Build configuration list for PBXNativeTarget "FP_Mobile_App_Developers_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B62DDD242831FAC50030B1E3 /* Debug */,
@@ -675,7 +681,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B62DDD262831FAC50030B1E3 /* Build configuration list for PBXNativeTarget "Travel DiriesTests" */ = {
+		B62DDD262831FAC50030B1E3 /* Build configuration list for PBXNativeTarget "FP_Mobile_App_Developers_iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B62DDD272831FAC50030B1E3 /* Debug */,
@@ -684,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B62DDD292831FAC50030B1E3 /* Build configuration list for PBXNativeTarget "Travel DiriesUITests" */ = {
+		B62DDD292831FAC50030B1E3 /* Build configuration list for PBXNativeTarget "FP_Mobile_App_Developers_iOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B62DDD2A2831FAC50030B1E3 /* Debug */,
